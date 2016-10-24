@@ -23,3 +23,7 @@ Password: Choco2016
 ```
 
 [Link](http://lab.mariofont.com/php-login/index.php)
+
+## Authors
+
+* **Mario Font** - *Whole project* - [Twitter](https://twitter.com/mario_font)
