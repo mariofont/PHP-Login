@@ -12,8 +12,8 @@ Simple, secure and MySQL-free login system.
 
 1. Download the source files to your computer.
 2. Open `login.php` with your favorite text editor (I suggest you use [Atom](https://atom.io)) and find the array `$logins`.
-3. Change the usernames and passwords for your own (you can add as many users as you want, although it is not recommended).
-4. Save the file, upload it to your webserver and give it a try.
+3. Change the usernames and passwords for your own.
+4. Save the files, upload them to your webserver and give it a try.
 
 ## Live example
 
