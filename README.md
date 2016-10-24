@@ -6,7 +6,7 @@ Simple, secure and MySQL-free login system.
 
 * The system is coded in PHP, HTML and CSS.
 * The visual framework used is [Bootstrap](http://getbootstrap.com).
-* Three main pages are used: `login.php` to show the login form, `index.php` as the default password-protected area and `logout.php` to end the session.
+* There are three main pages: `login.php` to show the login form, `index.php` as the default password-protected area and `logout.php` to end the session.
 
 ## How to use it
 
