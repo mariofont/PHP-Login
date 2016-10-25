@@ -36,7 +36,7 @@
 
       <div class="jumbotron">
         <h1>Status: logged in</h1>
-        <p class="lead">And just like that you've created your first password protected area with PHP, HTML and a little bit of CSS. Change the username and password in the array for your own and give it a try!</p>
+        <p class="lead">And just like that you've created your first password protected area with PHP and a little knowledge of HTML. Change the username and password in login.php for your own and give it a try!</p>
         <p><a class="btn btn-lg btn-success" href="logout.php" role="button">Log out</a></p>
       </div>
 
