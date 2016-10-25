@@ -1,7 +1,7 @@
 [![GitHub release](https://img.shields.io/badge/version-v1.0.0-blue.svg)](https://github.com/mariofont/PHP-Login)
 # PHP-Login
 
-Simple, fast-forward, and MySQL-free login system.
+Simple, fast-forward, and database-free login system.
 
 ## How it works
 
