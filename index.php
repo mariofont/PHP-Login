@@ -2,8 +2,8 @@
 
   session_start(); /* Starts the session */
 
-  if(!isset($_SESSION['UserData']['Username'])){ /* Redirects user to Login.php if not logged in */
-	   header("location:login.php");
+  if($_SESSION['Active'] == false){ /* Redirects user to Login.php if not logged in */
+    header("location:login.php");
 	  exit;
   }
 ?>
@@ -69,7 +69,7 @@
       </footer>
 
     </div>
-    
+
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
   </body>
 </html>

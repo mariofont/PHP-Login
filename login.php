@@ -1,3 +1,7 @@
+<?php
+  session_start();
+?>
+
 <!-- HTML code for Bootstrap framework and form design -->
 
 <!DOCTYPE html>
@@ -28,24 +32,25 @@
 
 <?php
 
-  session_start(); /* Starts the session */
-
-	/* Check Login form submitted */
+  /* Check if login form has been submitted */
 	if(isset($_POST['Submit'])){
-		/* Define username and associated password array */
-		$logins = array('Steve' => 'Choco2016','Alex' => 'Ice2017');
 
-		/* Check and assign submitted Username and Password to new variable */
-		$Username = isset($_POST['Username']) ? $_POST['Username'] : '';
-		$Password = isset($_POST['Password']) ? $_POST['Password'] : '';
+    /* Define username and password */
+    $Username = "Steve";
+    $Password = "Choco2016";
 
-		/* Check Username and Password existence in defined array */
-		if (isset($logins[$Username]) && $logins[$Username] == $Password){
-			/* Success: Set session variables and redirect to Protected page  */
-			$_SESSION['UserData']['Username']=$logins[$Username];
+    /* Check if form's username and password matches */
+    if(($_POST['Username'] == $Username) && ($_POST['Password'] == $Password)) {
+
+      /* Success: Set session variables and redirect to protected page */
+      $_SESSION['Username'] = $Username;
+      $_SESSION['Password'] = $Password;
+
+      $_SESSION['Active'] = true;
 			header("location:index.php");
 			exit;
-		} else {
+
+    } else {
 			?>
         <!-- Show an error alert -->
         &nbsp;
