@@ -6,14 +6,28 @@ Simple, secure and MySQL-free login system.
 
 * The system is coded in PHP, HTML and CSS.
 * The visual framework used is [Bootstrap](http://getbootstrap.com).
-* There are three main pages: `login.php` to show the login form, `index.php` as the default password-protected area and `logout.php` to end the session.
+* There are three main pages: `login.php` shows the login form, `index.php` the default password-protected area and `logout.php` simply ends the session.
 
 ## How to use it
 
 1. Download the source files to your computer.
-2. Open `login.php` with your favorite text editor (I suggest you use [Atom](https://atom.io)) and find the array `$logins`.
-3. Change the usernames and passwords for your own.
+2. Open `login.php` with your favorite text editor (I suggest you use [Atom](https://atom.io)) and find the variables `$Username` and `$Password`.
+3. Change the username and password for your own.
 4. Save the files, upload them to your webserver and give it a try.
+
+EXTRA:
+
+5. If you want to password-protect any page, just add this snippet of code to the beginning of it:
+
+```php
+<?php
+  session_start(); /* Starts the session */
+  if($_SESSION['Active'] == false){ /* Redirects user to Login.php if not logged in */
+    header("location:login.php");
+	  exit;
+  }
+?>
+```
 
 ## Live example
 
