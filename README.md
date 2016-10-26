@@ -1,4 +1,4 @@
-[![GitHub release](https://img.shields.io/badge/version-v1.1.0-blue.svg)](https://github.com/mariofont/PHP-Login)
+[![GitHub release](https://img.shields.io/badge/version-v1.1.1-blue.svg)](https://github.com/mariofont/PHP-Login)
 # PHP-Login
 
 Simple, easy-to-use, and database-free login system.
@@ -42,3 +42,4 @@ Password: Choco2016
 ## Authors
 
 * **Mario Font** - *Whole project* - [Twitter](https://twitter.com/mario_font)
+* **Calebrw** - *Security fixes* - [GitHub](https://github.com/Calebrw)
