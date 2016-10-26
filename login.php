@@ -38,7 +38,7 @@ session_start();
         if(isset($_POST['Submit'])){
 
             // Rudimentary hash check
-            $result = password_verify($_POST['password'], $Password);
+            $result = password_verify($_POST['Password'], $Password);
 
             /* Check if form's username and password matches */
             if( ($_POST['Username'] == $Username) && ($result === true) ) {
