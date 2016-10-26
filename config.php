@@ -2,4 +2,4 @@
 
 /* Define username and password */
 $Username = "Steve";
-$Password = "Choco2016"; // Raw password
+$Password = "$2y$10$1GmNO63bbKWpaPxcqLaLW.yVmvoxyOD9krWXxn2XAY.QSdbfcARDK";

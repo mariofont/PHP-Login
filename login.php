@@ -37,8 +37,11 @@ session_start();
         /* Check if login form has been submitted */
         if(isset($_POST['Submit'])){
 
+            // Rudimentary hash check
+            $result = password_verify($_POST['password'], $Password);
+
             /* Check if form's username and password matches */
-            if(($_POST['Username'] == $Username) && ($_POST['Password'] == $Password)) {
+            if( ($_POST['Username'] == $Username) && ($result === true) ) {
 
                 /* Success: Set session variables and redirect to protected page */
                 $_SESSION['Username'] = $Username;
