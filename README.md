@@ -41,5 +41,5 @@ Password: Choco2016
 
 ## Authors
 
-* **Mario Font** - *Whole project* - [Twitter](https://twitter.com/mario_font)
+* **Mario Font** - *Whole project* - [GitHub](https://github.com/mariofont)
 * **Calebrw** - *Security fixes* - [GitHub](https://github.com/Calebrw)
