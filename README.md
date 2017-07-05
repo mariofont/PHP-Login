@@ -13,7 +13,7 @@ Simple, easy-to-use, and database-free login system.
 
 1. Download the source files to your computer.
 2. Open `config.php` with your favorite text editor (I suggest you use [Atom](https://atom.io)) and find the variables `$Username` and `$Password`.
-3. Change the username and password for your own.
+3. Change the username and password (note that you have to use the salted version of your password. You can do that here: [Hash password](http://lab.mariofont.com/hash-utilities/index.php)).
 4. Save the files, upload them to your webserver and give it a try.
 
 ###### EXTRA:
