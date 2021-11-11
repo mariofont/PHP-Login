@@ -1,11 +1,29 @@
 <?php
-require_once ('config.php'); // For storing username and password.
+
+require_once 'config.php';
+require_once 'src/Login.php';
 
 session_start();
+
+/* @todo Sanitize these variable */
+$username = $_POST['Username'];
+$password = $_POST['Password'];
+
+$_SESSION['Active'] = false;
+if (isset($_POST['Submit'])) {
+    $login = new Login();
+
+    if ($login->checkLogin($username, $password)) {
+        /* Success: Set session variables and redirect to protected page */
+        $_SESSION['Username'] = $username;
+        $_SESSION['Active'] = true;
+
+        header("location:index.php");
+        exit;
+    }
+}
+
 ?>
-
-<!-- HTML code for Bootstrap framework and form design -->
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -31,38 +49,18 @@ session_start();
             </label>
         </div>
         <button name="Submit" value="Login" class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-
+        &nbsp;
         <?php
-
-        /* Check if login form has been submitted */
-        if(isset($_POST['Submit'])){
-
-            // Rudimentary hash check
-            $result = password_verify($_POST['Password'], $Password);
-
-            /* Check if form's username and password matches */
-            if( ($_POST['Username'] == $Username) && ($result === true) ) {
-
-                /* Success: Set session variables and redirect to protected page */
-                $_SESSION['Username'] = $Username;
-
-                $_SESSION['Active'] = true;
-                header("location:index.php");
-                exit;
-
-            } else {
-                ?>
-                <!-- Show an error alert -->
-                &nbsp;
-                <div class="alert alert-danger alert-dismissible" role="alert">
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <strong>Warning!</strong> Incorrect information.
-                </div>
-                <?php
-            }
-        }
+        /* Check if login form has been submitted and authenticated */
+        if(isset($_POST['Submit']) && ! $_SESSION['Active']):
         ?>
-
+        <div class="alert alert-danger alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <strong>Warning!</strong> Incorrect information.
+        </div>
+        <?php
+        endif;
+        ?>
     </form>
 </div>
 
